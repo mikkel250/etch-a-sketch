@@ -1,0 +1,4 @@
+#sketchpad {
+	grid-area: 800px 800px;
+	justify-items: stretch;
+}
