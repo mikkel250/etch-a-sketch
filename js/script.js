@@ -1,14 +1,17 @@
 // Button at top of page will clear current grid and prompt for new grid size
-function resetButton {
+function resetButton() {
 	var resetButton = document.getElementById("#reset");
-	resetButton.onclick = resetRedraw();
+	resetButton.onclick = function() {
+		prompt("Reset sketchpad and start over? \n Enter the number of squares to create in the sketchpad area.").onclick(createGrid(numberOfSquares));
+
+	}
 }
 
 // function to reset grid and draw new one
 function resetRedraw() {
-	let redo = prompt("Reset sketchpad and start over? \n Enter the number of squares to create in the sketchpad area.");
-	redo
-}	
+	
+	}	
+
 // Get the user input on how many squares to draw
 
 

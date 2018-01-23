@@ -1,8 +1,23 @@
 #sketchpad {
 	grid-area: 800px 800px;
 	justify-items: stretch;
+	padding-top: 25px;
+	margin: auto;
+	box-shadow: 5px;
 }
 
 #reset {
-	
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin: auto;
+}
+
+h2 {
+	padding-top: 25px;
+	margin: auto;
+}
+
+body {
+	margin: auto;
+	justify-content: center;
 }
