@@ -1,23 +1,30 @@
 #sketchpad {
-	grid-area: 800px 800px;
-	justify-items: stretch;
-	padding-top: 25px;
-	margin: auto;
-	box-shadow: 5px;
+	display: grid;
+	width: 500px;
+	height: 500px;
+	/*justify-items: stretch;*/
+	border: 1px solid black;
+	margin: 25px auto; /* set all 4 margins to 25px and use auto to center it horizontally */
 }
 
 #reset {
-	padding-top: 25px;
-	padding-bottom: 25px;
-	margin: auto;
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 60px;
 }
 
 h2 {
-	padding-top: 25px;
-	margin: auto;
+	padding-top: 50px;
+	margin: 25px 25px 25px 150px;
 }
 
 body {
+	background: #555;		
+}
+
+.content {
+	max-width: 800px;	
+	background: white;
 	margin: auto;
-	justify-content: center;
 }
