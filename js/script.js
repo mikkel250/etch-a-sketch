@@ -3,8 +3,8 @@ var sketchpad = document.getElementById("sketchpad");
 
 // Button at top of page will clear current grid and prompt for new grid size
 function resetButton() {
-	var resetButton = document.getElementById("#reset");
-	resetButton.onclick = function() {
+	var resetBtn = document.getElementById("#reset");
+	resetBtn.onclick = function() {
 		prompt("Reset sketchpad and start over? \n Enter the number of squares to create in the sketchpad area.").onclick(createGrid(numberOfSquares));
 
 	}
@@ -28,7 +28,7 @@ function createGrid(numberOfSquares) {
 	
 }
 
-createGrid(8);
+createGrid(32);
 
 // Hover effect so the grid divs change color when mouse passes over
 // will have to select the child element of sketchpad div
