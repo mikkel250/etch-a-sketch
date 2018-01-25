@@ -1,15 +1,25 @@
 var sketchpad = document.getElementById("sketchpad");
 
-var resetBtn = document.getElementById("#reset");
-resetBtn.onclick = resetButton();
+document.getElementById("reset").onclick = resetButton;
+// resetBtn.onclick = resetButton;
+
+// check to see if input is an integer
+function isInt4(value) { 
+  return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value));
+}
 
 // Button at top of page will clear current grid and prompt for new grid size
 function resetButton() {
-	let resetPrompt = prompt("Reset sketchpad and start over? \n Enter the number of squares to create in the sketchpad area.").onclick(createGrid(numberOfSquares));
-	if (resetPrompt != null) {
-		createGrid(numberOfSquares);
-	}	
+	var resetPrompt = prompt("Reset sketchpad and start over? \n Enter the number of squares to create in the sketchpad area.");
+	var resetPromptToNumber = parseInt(resetPrompt);
+	if (isInt4(resetPromptToNumber) == true) {    // if the answer to the prompt is an integer		
+		createGrid(resetPromptToNumber);
+	} else {
+		alert("Invalid response. Please enter only whole numbers.");
+	}
 }
+
+
 
 // function to reset grid and draw new one
 function resetRedraw() {
@@ -23,13 +33,15 @@ function resetRedraw() {
 // number of times to run it passed in as the argument
 function createGrid(numberOfSquares) {
 	for (let i = 0; i < numberOfSquares.length; i++) {
-		document.createElement("div");
-		sketchpad.appendChild("div");
+		//debugger;
+		let square = document.createElement("div");
+		sketchpad.appendChild(square);
+		console.log("1 square added.")
 	}
 	
 }
 
-//createGrid(32);
+createGrid(16);
 
 // Hover effect so the grid divs change color when mouse passes over
 // will have to select the child element of sketchpad div
