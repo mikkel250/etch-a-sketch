@@ -15,6 +15,16 @@
 }
 
 h2 {
-	padding-top: 10px;
-	text-align: center;
+	padding-top: 50px;
+	margin: 25px 25px 25px 150px;
+}
+
+body {
+	background: #555;		
+}
+
+.content {
+	max-width: 800px;	
+	/*background: white; */
+	margin: auto;
 }
